@@ -85,7 +85,7 @@ es = EarlyStopping(monitor = 'val_loss',    # 상당히 중요한 함수
             restore_best_weights=True   # 디폴트는 False # 페이션스 진행 후 최소값을 최종값으로 리턴 
             )
 
-hist = model.fit(x_train, y_train, epochs = 1000,
+hist = model.fit(x_train, y_train, epochs = 1,
             batch_size = 50, validation_split=0.2,
             verbose=1, callbacks=[es]
             )
@@ -101,8 +101,9 @@ print(y_submit.shape)   # (715, 1)
 print("========================================")
 ######## submission.csv 만들기(count 컬럼에 값만 넣어주면 됌) ########
 submission_csv['count'] = y_submit
-print(submission_csv)
-
+print(submission_csv)   # [715 rows x 2 columns]
+print(y_submit)
+'''
 submission_csv.to_csv(path + "submission_0110_5.csv", index = False)
 
 y_predict=model.predict(x_test)
@@ -165,3 +166,4 @@ plt.show()
 # RMSE :  50.61270279985921
 # 걸린시간 :  22.7 초
 
+'''
