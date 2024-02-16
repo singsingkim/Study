@@ -24,14 +24,14 @@ from sklearn.preprocessing import MinMaxScaler, MaxAbsScaler
 from sklearn.preprocessing import StandardScaler, RobustScaler
 
 
-# scaler = MinMaxScaler()
-# scaler.fit(x_train)
-# x_train = scaler.transform(x_train)
-# x_test = scaler.transform(x_test)
-# print(np.min(x_train))  # 0.0
-# print(np.min(x_test))   # -0.010370370370370367
-# print(np.max(x_train))  # 1.0
-# print(np.max(x_test))   # 1.0789745710150918
+scaler = MinMaxScaler()
+scaler.fit(x_train)
+x_train = scaler.transform(x_train)
+x_test = scaler.transform(x_test)
+print(np.min(x_train))  # 0.0
+print(np.min(x_test))   # -0.010370370370370367
+print(np.max(x_train))  # 1.0
+print(np.max(x_test))   # 1.0789745710150918
 
 # scaler = MaxAbsScaler()
 # scaler.fit(x_train)
@@ -51,14 +51,14 @@ from sklearn.preprocessing import StandardScaler, RobustScaler
 # print(np.max(x_train))  # 
 # print(np.max(x_test))   # 
 
-scaler = RobustScaler()
-scaler.fit(x_train)
-x_train = scaler.transform(x_train)
-x_test = scaler.transform(x_test)
-print(np.min(x_train))  # 
-print(np.min(x_test))   # 
-print(np.max(x_train))  # 
-print(np.max(x_test))   # 
+# scaler = RobustScaler()
+# scaler.fit(x_train)
+# x_train = scaler.transform(x_train)
+# x_test = scaler.transform(x_test)
+# print(np.min(x_train))  # 
+# print(np.min(x_test))   # 
+# print(np.max(x_train))  # 
+# print(np.max(x_test))   # 
 
 
 
